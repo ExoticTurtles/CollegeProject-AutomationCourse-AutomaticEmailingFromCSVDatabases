@@ -28,7 +28,11 @@ body{
     left: 0; 
     top: 0; 
     position: fixed; 
-}	
+}
+
+#logo {
+  text-align: center;
+}
 
 #main-header a {
       color: white;
@@ -52,8 +56,32 @@ body{
   align-items: center;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .2);
 }
+
+.importarbd{
+  background: white;
+  border: 10px;
+  vertical-align: middle;
+  border-color: black;
+  border-radius: 10%;
+  padding: 40px;
+  margin: 0 auto;
+  margin-top: 200px;
+  width:1000px;
+  height: 500px;
+  align-self: center;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .2);
+}
  
 .register h2{
+  color: #797979;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.importarbd h2{
   color: #797979;
   text-align: center;
   margin-bottom: 50px;
@@ -70,13 +98,35 @@ body{
   border-bottom: 1px solid #a8a8a8;
   color: #333;
 }
- 
+
+.importarbd input{
+  width: 80%;
+  padding: 5px;
+  font-size: 16px;
+  margin: 25px;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom: 1px solid #a8a8a8;
+  color: #333;
+}
+
 .register input:active,
 .register input:focus{
   outline: none;
 }
 
+.importarbd input:active,
+.importarbd input:focus{
+  outline: none;
+}
+
 .register p {
+  margin-left: 25px;
+  color: #333;
+}
+
+.importarbd p {
   margin-left: 25px;
   color: #333;
 }
@@ -88,6 +138,13 @@ body{
 
 }
  
+.importarbd .hypervinculo {
+  
+  text-align: center;
+  color: #333;
+
+}
+
 .register .submit{
 
   margin: 0 auto;
@@ -102,6 +159,23 @@ body{
   cursor: pointer;
   display: flex;
 }
+
+
+.importarbd .submit{
+
+  margin: 0 auto;
+  border-radius: 10%;
+  width: auto;
+  padding: 15px;
+  text-align: center;
+  background: #FE2E2E;
+  color: #fff;
+  font-size: 12px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+  cursor: pointer;
+  display: flex;
+}
+
  
 #main-footer {
     background: #FE2E2E;
