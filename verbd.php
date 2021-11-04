@@ -26,17 +26,10 @@ session_start();
  ?>
 
 
-  <div class="importarbd">
+  <div class="verbd">
     <form action="import.php" method="post" enctype="multipart/form-data">
-      <h2>Importar base de datos</h2>
-      <p><b>Asignar el nombre a la base de datos</b></p>
-      <input type="text" placeholder="nombre" name="Nombre" class="nombre">
-      <p><b>Base de datos</b></p>
-      <input type="file" placeholder="archivo"  name="archivo" class="localizacion">
-      <br><br>
-      <div id="Btn">
-      <input type="submit" class="submit" value="Importar">
-      </div>
+      <h2>Bases de datos Importadas </h2>
+      
     
       </form>
   </div>
