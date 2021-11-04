@@ -16,7 +16,7 @@
           <a class="nav-link" href="impbd.php">Importar base de datos </a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="#">Modificar base de datos</a>
+          <a class="nav-link" href="verbd.php">Ver bases de datos</a>
         </li>
       
         <li class="nav-item active">
