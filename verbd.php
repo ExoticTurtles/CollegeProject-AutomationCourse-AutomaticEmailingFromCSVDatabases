@@ -27,39 +27,78 @@ session_start();
 
 
   <div class="verbd">
-    <form action="import.php" method="post" enctype="multipart/form-data">
-      <h2>Bases de datos Importadas </h2>
-      
-    
-      </form>
+      <h2>Bases de datos Importadas </h2>    
   </div>
+
+<br><br><br>
+<div class="col-lg-8 col-md-10 ml-auto mr-auto">
+  <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="text-center">#</th>
+                            <th>Nombre Tabla</th>
+                            <th>Filas</th>
+                            <th>Columnas</th>
+                            <th class="text-right">Campos</th>
+                            <th class="text-right">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                      <?php
+
+                      
+                      require("connect_db.php");
+                      $sql="SELECT * FROM tablasregistro WHERE idusuario='".$_SESSION['id']."'";
+                      $result=mysqli_query($conexion,$sql);
+
+                      while ($fila=mysqli_fetch_array($result)) {
+                          $idtabla=$fila['idtabla'];
+                          $nombre=$fila['nombre'];
+                          $filas=$fila['filas'];
+                          $columnas=$fila['columnas'];
+
+                                                  
+                                                                        
+                          ?>
+
+                        <tr>
+                            <td><?php echo $idtabla ?></td>
+                            <td><?php echo $nombre?></td>
+                            <td ><?php echo $filas ?></td>
+                            <td ><?php echo $columnas ?></td>
+                            <td class="text-right"><?php
+
+                            $sqlcampos="SELECT * FROM campos WHERE idtabla=$idtabla";
+                            $result2=mysqli_query($conexion,$sqlcampos);
+
+                            while ($campos=mysqli_fetch_array($result2)) {
+                              $camponombre=$campos['nombre'];
+
+                              echo $camponombre. "<br>" ;
+                              
+                            }  
+                              ?>
+                          
+                            </td>
+
+                            
+
+                            <td class="td-actions text-right">
+                            <?php echo "<button   type='button' rel='tooltip' class='btn btn-danger btn-just-icon btn-sm' data-original-title='' title=''>
+                                          <i  class='material-icons'><a href='eliminartabla.php?id=$idtabla&nombre=$nombre'>Eliminar</a></i>
+                                        </button>";?>
+                            </td>
+                        </tr>
+
+                    <?php } ?>
+                        
+                    </tbody>
+                </table>
+                </div>
+</div>
   
-	<footer id="main-footer">
-		<p><a href="https://www.uanl.mx/">Preguntas frecuentes. </a></p>
-		<p><a href="https://www.uanl.mx/">¿Quienes somos?. </a></p>
-		<p><a href="https://www.uanl.mx/">Aviso de terminos y condiciones. </a></p>
-	</footer> 
+
 </body>
 </html>
-
-
-<script type="text/javascript">
-
-function uploadfiles()
-{
-  var Form = new FormData($('#filesForm')[0]);
-  $.ajax({
-
-    url: "import.php",
-    type: "post",
-    data: Form, 
-    processData: false,
-    contentType: false,
-    success: function(data)
-    {
-        alert('Base de datos agregada');
-    }
-  })
-}
-
-</script>
