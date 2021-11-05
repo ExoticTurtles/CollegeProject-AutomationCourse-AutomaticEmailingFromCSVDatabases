@@ -7,7 +7,7 @@ $pass=$_POST['contrasena'];
 $_SESSION['username']=$username;
 
 
-$sql=mysqli_query($conexion, "SELECT id, nombre, correo, contrasena, ocupacion from usuario where nombre='$username'");
+$sql=mysqli_query($conexion, "SELECT id, nombre, correo, contrasena, ocupacion from usuario where nombre ='$username'");
 
 if($f==mysqli_fetch_assoc($sql)){
   if ($pass==$f['contrasena']) {
