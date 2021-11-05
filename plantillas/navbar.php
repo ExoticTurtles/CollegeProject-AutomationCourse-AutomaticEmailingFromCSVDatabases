@@ -16,15 +16,7 @@
           <a class="nav-link" href="impbd.php">Importar base de datos </a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="verbd.php">Ver bases de datos</a>
-        </li>
-      
-        <li class="nav-item active">
-          <a class="nav-link " href="#">Crear plantilla</a>
-        </li>
-
-        <li class="nav-item active">
-          <a class="nav-link " href="#">Modificar plantilla</a>
+          <a class="nav-link" href="verbd.php">Ver  bases de datos</a>
         </li>
 
         <li class="nav-item active">

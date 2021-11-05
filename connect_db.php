@@ -3,7 +3,7 @@
 
 //creacion de conexion al servidor
 
-$conexion= mysqli_connect("localhost","root","","emmasive",3308);
+$conexion= mysqli_connect("localhost","root","","emmasive",3306);
 
 //validar conexion
 if($conexion-> connect_errno)
