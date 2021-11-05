@@ -44,8 +44,7 @@ $campoprincipal = implode("",$campos[0]);
 
 
 $creartabla = "CREATE TABLE `" . $nombre. "`(
-    `" . $campoprincipal. "` VARCHAR(100)
-)";
+    `" . $campoprincipal. "` VARCHAR(100) ) CHARACTER SET utf8 COLLATE utf8_spanish2_ci";
 
 $rescreartabla=mysqli_query($conexion, $creartabla);
 
@@ -60,7 +59,7 @@ foreach($campos as $campo)
     $campoactual = implode("",$campo);
     $campoactual = trim($campoactual);
     //$cadena = $campoactual. "," .$cadena ;
-    $sqlcampos = "ALTER TABLE `" . $nombre. "` ADD COLUMN `" . $campoactual. "` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_spanish2_ci";
+    $sqlcampos = "ALTER TABLE `" . $nombre. "` ADD COLUMN `" . $campoactual. "` VARCHAR(100) ";
     $rescampos=mysqli_query($conexion, $sqlcampos);
     
   
