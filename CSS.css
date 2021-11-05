@@ -201,3 +201,71 @@ body{
       margin: 0 auto;
     }
     
+
+    .verbd {
+      background: white;
+      border: 10px;
+      vertical-align: middle;
+      border-color: black;
+      border-radius: 10%;
+      padding: 20px;
+      margin: 0 auto;
+      margin-top: 50px;
+      width: 1000px;
+      height: 130px;
+      align-self: center;
+      padding: 10px;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .2);
+    }
+
+    .verbd h2{
+      color: #797979;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  
+  .verbd input{
+      width: 80%;
+      padding: 5px;
+      font-size: 16px;
+      margin: 25px;
+      border-top-style: none;
+      border-left-style: none;
+      border-right-style: none;
+      border-bottom: 1px solid #a8a8a8;
+      color: #333;
+  }
+
+.verbd input:active,
+.verbd input:focus{
+  outline: none;
+}
+
+.verbd p {
+  margin-left: 25px;
+  color: #333;
+}
+
+.verbd .hypervinculo {
+  
+  text-align: center;
+  color: #333;
+
+}
+
+.verbd .submit{
+
+  margin: 0 auto;
+  border-radius: 10%;
+  width: auto;
+  padding: 15px;
+  text-align: center;
+  background: #FE2E2E;
+  color: #fff;
+  font-size: 12px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+  cursor: pointer;
+  display: flex;
+}

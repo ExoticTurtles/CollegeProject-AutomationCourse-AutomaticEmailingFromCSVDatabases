@@ -165,7 +165,7 @@ foreach($campos as $campo)
         $idtabla=$tabla['idtabla'];
     }
 
-    $_SESSION['tablaactual']=$idtabla;
+    $_SESSION['tablaactual']=$nombre;
 
     $columnas--;
 
