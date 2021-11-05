@@ -3,12 +3,13 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+require("connect_db.php");
 require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 require 'phpmailer/src/Exception.php';
 
 $mail = new PHPMailer(true);
-$query = mysqli_query($conexion, "SELECT * FROM usuario");
+$query = mysqli_query($conexion, "SELECT * FROM pruebacsv2");
 $result = mysqli_num_rows($query);
 echo $result;
 
@@ -18,21 +19,22 @@ if($result > 0){
         try{
             $mail->SMTPDebug = SMTP::DEBUG_SERVER;
             $mail->isSMTP();
-            $mail->Host = 'smtp.office365.com';
+            $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'LDGLBusiness@outlook.es';
-            $mail->Password = '10FImE01';
+            $mail->Username = 'emmassive2021@gmail.com';
+            $mail->Password = 'Admin1234*';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
     
         
-            $mail->setFrom('LDGLBusiness@outlook.es', 'Correos masivos para ti y para todos');
-            $mail->addAddress($data["correo"], 'COMPAS CDP');
+            $mail->setFrom('emmassive2021@gmail.com', 'Prueba de base de datos');
+            $mail->addAddress($data["Correo"], 'Contenido del correo que vamos a enviar');
         
             $mail->isHTML(true);
-            $mail->Subject = 'Prueba de correo';
-            $mail->Body = 'Esta es una prueba';
+            $mail->Subject = 'Calificaciones de: '.$data["Alumno"];
+            $mail->Body = 'Esta es una prueba <br> Calificaciones:'.$data["Calificacion"];
+
         
             $mail->send();
         
