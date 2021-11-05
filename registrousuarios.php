@@ -1,6 +1,6 @@
 <?php
 //creacion de conexion al servidor
-$conexion= mysqli_connect("localhost","id17882313_root","i[_A=|*dk4?mCmV","d17882313_emmasive",3306);
+require("connect_db.php");
 //validar conexion
 if(!$conexion)
 {
@@ -20,6 +20,6 @@ if($result)
 }
 mysqli_close($conexion);
 
-echo "<script>location.href='PruebaEmail.php'</script>";
+echo "<script>location.href='index.php'</script>";
 
  ?>

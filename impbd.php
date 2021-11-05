@@ -41,11 +41,6 @@ session_start();
       </form>
   </div>
   
-	<footer id="main-footer">
-		<p><a href="https://www.uanl.mx/">Preguntas frecuentes. </a></p>
-		<p><a href="https://www.uanl.mx/">¿Quienes somos?. </a></p>
-		<p><a href="https://www.uanl.mx/">Aviso de terminos y condiciones. </a></p>
-	</footer> 
 </body>
 </html>
 

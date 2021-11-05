@@ -9,7 +9,7 @@ $_SESSION['username']=$username;
 
 $sql=mysqli_query($conexion, "SELECT id, nombre, correo, contrasena, ocupacion from usuario where nombre ='$username'");
 
-if($f==mysqli_fetch_assoc($sql)){
+if($f=mysqli_fetch_assoc($sql)){
   if ($pass==$f['contrasena']) {
     $_SESSION['id']=$f['id'];
     $_SESSION['nombre']=$f['nombre'];

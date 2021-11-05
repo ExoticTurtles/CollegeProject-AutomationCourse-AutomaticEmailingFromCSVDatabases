@@ -31,7 +31,9 @@ session_start();
     <div align="center"><img src="SRC/VSC-Logo.png" alt="" width="200" height="200" /></div>
     <br><br>
     <div id="Btn">
+    <form action="PruebaEmail.php" method="post">
     <input type="submit" class="submit" value="Realizar envio">
+    </form>
     </div>
    <p class="hypervinculo">Pulse para realizar un envio </p>
     
@@ -42,13 +44,5 @@ session_start();
 </div>
 
 
-
-
-
-	<footer id="main-footer">
-		<p><a href="https://www.uanl.mx/">Preguntas frecuentes. </a></p>
-		<p><a href="https://www.uanl.mx/">¿Quienes somos?. </a></p>
-		<p><a href="https://www.uanl.mx/">Aviso de terminos y condiciones. </a></p>
-	</footer> 
 </body>
 </html>
