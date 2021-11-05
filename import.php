@@ -60,7 +60,7 @@ foreach($campos as $campo)
     $campoactual = implode("",$campo);
     $campoactual = trim($campoactual);
     //$cadena = $campoactual. "," .$cadena ;
-    $sqlcampos = "ALTER TABLE `" . $nombre. "` ADD COLUMN `" . $campoactual. "` VARCHAR(100)";
+    $sqlcampos = "ALTER TABLE `" . $nombre. "` ADD COLUMN `" . $campoactual. "` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_spanish2_ci";
     $rescampos=mysqli_query($conexion, $sqlcampos);
     
   
