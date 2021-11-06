@@ -4,15 +4,18 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 session_start();
-extract($_GET);
 
 require("connect_db.php");
 require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
 require 'phpmailer/src/Exception.php';
 
+$nombre = $_POST['nombre'];
+$correo = $_POST['correo'];
+$password = $_POST['password'];
+
 $mail = new PHPMailer(true);
-$query = mysqli_query($conexion, "SELECT * FROM nombre");
+$query = mysqli_query($conexion, "SELECT * FROM `" . $nombre. "`");
 $result = mysqli_num_rows($query);
 echo $result;
 $email = $correo;

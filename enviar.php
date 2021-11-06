@@ -35,8 +35,10 @@ session_start();
       <input type="text" placeholder="cuerpo"  name="cuerpo" class="cuerpo">
       <br><br>
       <p><b>Escoger una base de datos</b></p>
-      <select name="department" id="">
-<?php
+
+      
+      <select name="nombre" id="">
+    <?php
     require("connect_db.php");
     $sql="SELECT * FROM tablasregistro";
     $result=mysqli_query($conexion,$sql);
@@ -46,7 +48,7 @@ session_start();
         $filas=$fila['filas'];
         $columnas=$fila['columnas'];
 ?>
-        <option value="<?php echo $id ?>"><?php echo $nombre ?></option>
+        <option value="<?php echo $nombre ?>"><?php echo $nombre ?></option>
 <?php } ?>
     </select>
       <p><b>Revisar la base de datos </b></p>
@@ -62,7 +64,6 @@ session_start();
       <div id="Btn">
       <input type="submit" class="submit" value="Importar">
       </div>
-
       </form>
   </div>
 
