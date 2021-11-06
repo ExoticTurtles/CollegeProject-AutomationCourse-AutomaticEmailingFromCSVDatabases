@@ -133,15 +133,13 @@ body{
 }
 
 .enviarbd input{
-  width: 100%;
+  width: 80%;
   padding: 5px;
   font-size: 16px;
   margin: 25px;
-  border-top-style: none;
-  border-left-style: none;
-  border-right-style: none;
   border-bottom: 1px solid #a8a8a8;
   color: #333;
+  border-radius: 10px;
 }
 
 .enviarbd .localizacion{
@@ -151,7 +149,7 @@ body{
             width : 800px;
             height : 400px;
             overflow : auto;
-            white-space:nowrap;
+            white-space: nowrap;
 }
 
 .register input:active,
@@ -231,12 +229,23 @@ body{
   width: auto;
   padding: 15px;
   text-align: center;
-  background: #42adce;
+  background: #ce5c42;
   color: #fff;
   font-size: 12px;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
   cursor: pointer;
   display: flex;
+}
+
+.enviarbd .select{
+  margin-left: 25px;
+  border-radius: 10%;
+  width: auto;
+  padding: 15px;
+  text-align: center;
+  font-size: 12px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+  cursor: pointer;
 }
 
  

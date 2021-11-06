@@ -27,57 +27,53 @@ session_start();
 
 
   <div class="enviarbd">
-    <form action="import.php" method="post" enctype="multipart/form-data">
+    <form action="PruebaEmail.php" method="post" enctype="multipart/form-data">
       <h2>Enviar un correo electronico a un grupo en especifico</h2>
       <p><b>Titulo del correooo</b></p>
-      <input type="text" placeholder="nombre" name="Nombre" class="nombre"> 
+      <input type="text" placeholder="titulo" name="titulo" class="titulo"> 
       <p><b>Cuerpo del correo</b></p>
-      <input type="text" placeholder="archivo"  name="archivo" class="localizacion">
+      <input type="text" placeholder="cuerpo"  name="cuerpo" class="cuerpo">
       <br><br>
       <p><b>Escoger una base de datos</b></p>
-
       <select name="department" id="">
-
 <?php
-
     require("connect_db.php");
     $sql="SELECT * FROM tablasregistro";
     $result=mysqli_query($conexion,$sql);
     while ($opciones=mysqli_fetch_array($result)) {
         $id=$opciones['idtabla'];
         $nombre=$opciones['nombre'];
+        $filas=$fila['filas'];
+        $columnas=$fila['columnas'];
 ?>
         <option value="<?php echo $id ?>"><?php echo $nombre ?></option>
 <?php } ?>
     </select>
       <p><b>Revisar la base de datos </b></p>
       <div id="Btn">
-      <button href="vertabla.php">Verificar </button>
-    </div>
+      <button type='button' rel='tooltip' class='btn btn-access btn-just-icon btn-sm' data-original-title='' title=''>
+      <i  class='material-icons'><a href='vertabla.php?id=$idtabla&nombre=$nombre&filas=$filas&columnas=$columnas'>Ver tabla</a></i>
+      </button>
+      </div>
       <p><b>Correo emisor </b></p>
-      <input type="text" placeholder="correo" name="correo" class="correo">
+      <input type="text" name="correo" class="correo">
       <p><b>Contraseña </b></p>
-      <input type="password" placeholder="password" name="password" class="password">
-
+      <input type="password" name="password" class="password">
       <div id="Btn">
       <input type="submit" class="submit" value="Importar">
       </div>
 
       </form>
   </div>
-  
-</body>
-</html>
 
-
-<script type="text/javascript">
+  <script type="text/javascript">
 
 function uploadfiles()
 {
   var Form = new FormData($('#filesForm')[0]);
   $.ajax({
 
-    url: "import.php",
+    url: "PruebaEmail.php",
     type: "post",
     data: Form, 
     processData: false,
@@ -90,3 +86,8 @@ function uploadfiles()
 }
 
 </script>
+
+  
+</body>
+</html>
+
