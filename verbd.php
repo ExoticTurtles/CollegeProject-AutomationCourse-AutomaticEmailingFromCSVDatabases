@@ -50,7 +50,7 @@ session_start();
 
                       
                       require("connect_db.php");
-                      $sql="SELECT * FROM tablasregistro WHERE idusuario='".$_SESSION['id']."'";
+                      $sql="SELECT * FROM tablasregistro WHERE idusuario='".$_SESSION['id']."' ORDER BY idtabla";
                       $result=mysqli_query($conexion,$sql);
 
                       while ($fila=mysqli_fetch_array($result)) {
@@ -70,7 +70,7 @@ session_start();
                             <td ><?php echo $columnas ?></td>
                             <td class="text-right"><?php
 
-                            $sqlcampos="SELECT * FROM campos WHERE idtabla=$idtabla";
+                            $sqlcampos="SELECT * FROM campos WHERE idtabla=$idtabla ORDER BY idcampos";
                             $result2=mysqli_query($conexion,$sqlcampos);
 
                             while ($campos=mysqli_fetch_array($result2)) {
@@ -86,11 +86,16 @@ session_start();
                             
 
                             <td class="td-actions text-right">
-                            <?php echo "<button   type='button' rel='tooltip' class='btn btn-danger btn-just-icon btn-sm' data-original-title='' title=''>
-                                          <i  class='material-icons'><a href='eliminartabla.php?id=$idtabla&nombre=$nombre'>Eliminar</a></i>
-                                        </button>";?>
-                            </td>
-                        </tr>
+
+                            <?php echo "<button   type='button' rel='tooltip' class='btn btn-access btn-just-icon btn-sm' data-original-title='' title=''>
+                                            <i  class='material-icons'><a href='vertabla.php?id=$idtabla&nombre=$nombre&filas=$filas&columnas=$columnas'>Ver tabla</a></i>
+                                          </button>";?>
+
+                              <?php echo "<button   type='button' rel='tooltip' class='btn btn-danger btn-just-icon btn-sm' data-original-title='' title=''>
+                                            <i  class='material-icons'><a href='eliminartabla.php?id=$idtabla&nombre=$nombre'>Eliminar</a></i>
+                                          </button>";?>
+                              </td>
+                          </tr>
 
                     <?php } ?>
                         
