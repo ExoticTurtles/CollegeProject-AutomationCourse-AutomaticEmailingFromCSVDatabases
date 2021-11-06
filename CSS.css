@@ -74,6 +74,21 @@ body{
   align-items: center;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .2);
 }
+
+.enviarbd{
+  background: rgb(255, 180, 180);
+  border: 10px;
+  vertical-align: middle;
+  border-color: black;
+  border-radius: 10%;
+  padding: 40px;
+  margin: 0 auto;
+  margin-top: 200px;
+  width:80%;
+  height: 60%;
+  padding: 10px;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .2);
+}
  
 .register h2{
   color: #797979;
@@ -83,6 +98,12 @@ body{
 
 .importarbd h2{
   color: #797979;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.enviarbd h2{
+  color: #332121;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -111,6 +132,28 @@ body{
   color: #333;
 }
 
+.enviarbd input{
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  margin: 25px;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+  border-bottom: 1px solid #a8a8a8;
+  color: #333;
+}
+
+.enviarbd .localizacion{
+  border : solid 2px #ff0000;
+            background : white;
+            padding : 4px;
+            width : 800px;
+            height : 400px;
+            overflow : auto;
+            white-space:nowrap;
+}
+
 .register input:active,
 .register input:focus{
   outline: none;
@@ -127,6 +170,11 @@ body{
 }
 
 .importarbd p {
+  margin-left: 25px;
+  color: #333;
+}
+
+.enviarbd p {
   margin-left: 25px;
   color: #333;
 }
@@ -176,6 +224,21 @@ body{
   display: flex;
 }
 
+.enviarbd .submit{
+
+  margin: 0 auto;
+  border-radius: 10%;
+  width: auto;
+  padding: 15px;
+  text-align: center;
+  background: #42adce;
+  color: #fff;
+  font-size: 12px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, .2);
+  cursor: pointer;
+  display: flex;
+}
+
  
 #main-footer {
     background: #FE2E2E;
@@ -194,12 +257,7 @@ body{
         color: white;
     }
 
-    @import url(https://fonts.googleapis.com/css?family=Roboto:400);
-    form{
-      padding: 20px;
-      max-width: 400px;
-      margin: 0 auto;
-    }
+
     
 
     .verbd {
@@ -269,3 +327,4 @@ body{
   cursor: pointer;
   display: flex;
 }
+
