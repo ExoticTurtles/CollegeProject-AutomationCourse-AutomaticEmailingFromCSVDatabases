@@ -3,6 +3,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+session_start();
+
 require("connect_db.php");
 require 'phpmailer/src/PHPMailer.php';
 require 'phpmailer/src/SMTP.php';
@@ -12,6 +14,8 @@ $mail = new PHPMailer(true);
 $query = mysqli_query($conexion, "SELECT * FROM pruebacsv2");
 $result = mysqli_num_rows($query);
 echo $result;
+$email = $_SESSION['correo'];
+echo $email;
 
 if($result > 0){
     while($data = mysqli_fetch_array($query)){
@@ -21,14 +25,14 @@ if($result > 0){
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'emmassive2021@gmail.com';
+            $mail->Username = $_SESSION['correo'];
             $mail->Password = 'Admin1234*';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
     
         
-            $mail->setFrom('emmassive2021@gmail.com', 'Prueba de base de datos');
+            $mail->setFrom($_SESSION['correo'], 'Prueba de base de datos');
             $mail->addAddress($data["Correo"], 'Contenido del correo que vamos a enviar');
         
             $mail->isHTML(true);
