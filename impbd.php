@@ -27,9 +27,10 @@ session_start();
 
 
   <div class="importarbd">
-    <form action="import.php" method="post" enctype="multipart/form-data">
+    <form action="import.php" method="post">
       <h2>Importar base de datos</h2>
       <p><b>Asignar el nombre a la base de datos</b></p>
+      <div class = "nombre">
       <input type="text" placeholder="nombre" name="Nombre" class="nombre">
       <p><b>Base de datos</b></p>
       <input type="file" placeholder="archivo"  name="archivo" class="localizacion">

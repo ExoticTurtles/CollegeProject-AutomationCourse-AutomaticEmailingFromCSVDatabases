@@ -29,10 +29,16 @@ session_start();
   <div class="importarbd">
     <form action="import.php" method="post" enctype="multipart/form-data">
       <h2>Enviar un correo electronico a un grupo en especifico</h2>
-      <p><b>Base de datos/Grupo a importar</b></p>
-      <input type="text" placeholder="nombre" name="Nombre" class="nombre">
-      <p><b>Base de datos</b></p>
-      <input type="file" placeholder="archivo"  name="archivo" class="localizacion">
+      <p><b>Titulo del correo</b></p>
+      <input type="text" placeholder="nombre" name="Nombre" class="nombre"> 
+      <p><b>Cuerpo del correo</b></p>
+      <input type="text" placeholder="archivo"  name="archivo" class="localizacion" style="border : solid 2px #ff0000;
+            background : white;
+            padding : 4px;
+            width : 800px;
+            height : 400px;
+            overflow : auto;
+            white-space:nowrap;">
       <br><br>
       <div id="Btn">
       <input type="submit" class="submit" value="Importar">

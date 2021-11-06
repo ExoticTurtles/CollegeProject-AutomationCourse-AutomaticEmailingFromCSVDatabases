@@ -33,10 +33,21 @@ a:focus {
     color: #3c4858;
 }
 
+body .nombre{
+    border : solid 2px #ff0000;
+            background : blue;
+            color : black;
+            padding : 4px;
+            width : 800px;
+            height : 600px;
+            overflow : auto;
+}
+
 small{
     font-size: 75% !important;
     color: #777;
 }
+
 
 .btn-group{
     position: relative;
@@ -288,6 +299,17 @@ small{
 .form-check{
     padding-left:0;
 }
+
+.form-check .nombre{
+    border : solid 2px #ff0000;
+            background : blue;
+            color : black;
+            padding : 4px;
+            width : 800px;
+            height : 600px;
+            overflow : auto;
+}
+
 .form-check .form-check-label {
     cursor: pointer;
     padding-left: 0px;
@@ -488,3 +510,4 @@ footer p a:hover{
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
   color: #555 !important;
 }
+
