@@ -29,9 +29,9 @@ session_start();
   <div class="enviarbd">
     <form action="PruebaEmail.php" method="post" enctype="multipart/form-data">
       <h2>Enviar un correo electronico a un grupo en especifico</h2>
-      <p><b>Titulo del correooo</b></p>
+      <p><b>Titulo del correo:</b></p>
       <input type="text" placeholder="titulo" name="titulo" class="titulo"> 
-      <p><b>Cuerpo del correo</b></p>
+      <p><b>Cuerpo del correo:</b></p>
       <input type="text" placeholder="cuerpo"  name="cuerpo" class="cuerpo">
       <br><br>
       <p><b>Escoger una base de datos</b></p>
