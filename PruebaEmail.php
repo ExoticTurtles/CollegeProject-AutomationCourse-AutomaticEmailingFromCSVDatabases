@@ -60,7 +60,11 @@ if($result > 0){
             $mail->setFrom($email, 'Correo de parte de EMMASIVE');
             $mail->addAddress($data["Correo"], 'Buenas tardes '.$data["Alumno"]);
             $mail->Subject = $titulo;
-            $mail->Body = $cuerpo;
+            $mail->Body = $cuerpo. "\n\nCalificaciones del alumon: " .$data["Alumno"].
+             "\n Matricula: " .$data["Matricula"].
+             "\nGrupo: " .$data[2].
+             "\n\nCalificacion Final: " .$data[12].
+             "\n\nAtentamente: " .$data["Profesora"]  ;
 
         
             $mail->send();
