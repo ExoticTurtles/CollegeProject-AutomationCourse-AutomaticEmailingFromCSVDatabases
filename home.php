@@ -31,7 +31,7 @@ session_start();
     <div align="center"><img src="SRC/VSC-Logo.png" alt="" width="200" height="200" /></div>
     <br><br>
     <div id="Btn">
-    <form action="PruebaEmail.php" method="post">
+    <form action="enviar.php" method="post">
     <input type="submit" class="submit" value="Realizar envio">
     </form>
     </div>
