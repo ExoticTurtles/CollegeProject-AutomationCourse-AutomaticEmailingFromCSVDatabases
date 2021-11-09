@@ -37,6 +37,7 @@ session_start();
       <br><br>
       <div id="Btn">
       <input type="submit" class="submit" value="Importar">
+      <a class="a" href="https://1drv.ms/x/s!AnFQen1sdoGV62ncwlo25Aoa14gg?e=Ltxn7k">Plantilla de la base de datos</a>
       </div>
     
       </form>
