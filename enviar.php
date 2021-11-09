@@ -51,12 +51,7 @@ session_start();
         <option value="<?php echo $nombre ?>"><?php echo $nombre ?></option>
 <?php } ?>
     </select>
-      <p><b>Revisar la base de datos </b></p>
-      <div id="Btn">
-      <button type='button' rel='tooltip' class='btn btn-access btn-just-icon btn-sm' data-original-title='' title=''>
-      <i  class='material-icons'><a href='vertabla.php?id=$idtabla&nombre=$nombre&filas=$filas&columnas=$columnas'>Ver tabla</a></i>
-      </button>
-      </div>
+      
       <p><b>Correo emisor </b></p>
       <input type="text" name="correo" class="correo">
       <p><b>Contraseña </b></p>
